@@ -7,7 +7,11 @@ import java.util.*;
 
 import static spark.Spark.*;
 
+//<<<<<<< test01
+//Es es Test01
+
 //Es es Master ahora con contributors
+//>>>>>>> master
 public class EjScanner {
     public static void main(String[] arguments) {
         StringProperty envio = new SimpleStringProperty();
@@ -17,7 +21,7 @@ public class EjScanner {
         System.out.println("Fecha y Hora: "+ fechorFormat.format(date));
         envio.set("Fecha y Hora: "+ fechorFormat.format(date) + " Ranking de datos: " + "\n");
 
-        port(8888);
+        port(8888); // aqui seteo el puerto para el Jetty
         get("/participants", (req, res) -> envio.get());
         Scanner input = new Scanner(System.in);
         String nombre = "";
@@ -81,6 +85,8 @@ public class EjScanner {
         }
         envio.set(algo) ;
         get("/participants", (req, res) -> envio.get());
+        // El agregado de <br/> es por el salto de linea en el navegador
+
         /*Plan B
         for (int i = 0; i < arLis.size(); i++) {
             System.out.println(arLis.get(i).getNombre()+" : "+arLis.get(i).getScore());
