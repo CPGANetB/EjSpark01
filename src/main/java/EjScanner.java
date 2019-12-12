@@ -7,7 +7,7 @@ import java.util.*;
 
 import static spark.Spark.*;
 
-//Es es Master
+//Es es Master ahora con contributors
 public class EjScanner {
     public static void main(String[] arguments) {
         StringProperty envio = new SimpleStringProperty();
