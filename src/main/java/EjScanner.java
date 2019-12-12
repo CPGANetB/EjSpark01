@@ -81,6 +81,8 @@ public class EjScanner {
         }
         envio.set(algo) ;
         get("/participants", (req, res) -> envio.get());
+        // El agregado de <br/> es por el salto de linea en el navegador
+        
         /*Plan B
         for (int i = 0; i < arLis.size(); i++) {
             System.out.println(arLis.get(i).getNombre()+" : "+arLis.get(i).getScore());
